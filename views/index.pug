@@ -1,0 +1,25 @@
+extends layout
+
+block content
+			
+		.indexheader
+				.dropdown#left
+					a(href="#", data-toggle="dropdown").dropdown-toggle 
+						i(class="fa fa-bars" aria-hidden="true")
+
+						ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu')
+							li
+							a(href="/resultat" target="_blank", tabindex='-1') Result View
+							li 
+							a(href="/ResultEntering" target="_blank", tabindex='-1') Enter Your Result
+							li.divider
+							li
+							a(href='/error' target="_blank", tabindex='-1') Error page
+
+				#right 
+					p &nbsp; The Church of God
+
+				script.
+					$('.dropdown-toggle').dropdown()
+
+				p The church is voting!

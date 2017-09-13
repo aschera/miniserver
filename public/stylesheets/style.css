@@ -1,0 +1,41 @@
+.indexheader {
+    width: 100%;
+    background-color: black;
+    min-height: 30em;
+    min-width: 20em;
+    color:white;
+}
+
+.resultheader {
+    width: 100%;
+    background-color: black;
+    background-size: 100% 20em;
+    min-height: 30em;
+    color:white;
+} 
+
+.voteheader {
+    width: 100%;
+    background-color: black;
+    background-size: 100% 20em;
+    min-height: 30em;
+    color:white;
+} 
+
+#left {float:left;}
+#right{margin-left: 30%; color:white; font-size: 2em;}
+
+#button{color: black;padding: 5px;}
+#input{
+	color: black;
+	background: transparent;
+	   border: none;
+	   font-size: 14px;
+	   height: 29px;
+	   padding: 5px; 
+}
+
+#theNews0{background-color: white; color:black;}
+#theNews1{background-color: white; color:black;}
+#theNews2{background-color: white; color:black;}
+#theNews3{background-color: white; color:black;}
