@@ -40,39 +40,78 @@ block resultat
                 ul#theNews3                
                 // here goes the list for the votes.
 
+                div#total
+                 
+
         script.
+
+            var total=
+                {
+                            Communists:0,
+                            Democrats:0,
+                            Greenparty:0,
+                            Pinkparty:0 
+                };
+
           socket.on('vote update', function (vote) {
 
             console.log(vote);
 
             const list0 = document.getElementById('theNews0');
             const listItem0 = document.createElement('li');
+
             const list1 = document.getElementById('theNews1');
             const listItem1 = document.createElement('li');
+
             const list2 = document.getElementById('theNews2');
             const listItem2 = document.createElement('li');
+
             const list3 = document.getElementById('theNews3');
             const listItem3 = document.createElement('li');
 
+            const totalnumber = document.getElementById('total');
+            const totalitem = document.createElement('span');
+
             let x = vote.party;
+            
+            
+
 
             if (x === 'Communists') {
+                
+                total.Communists = Number(total.Communists) + Number(vote.votes);
+                
                 list0.appendChild(listItem0);
-                listItem0.innerText = `${vote.church}, ${vote.votes}`;
+                listItem0.innerText = `${vote.church}, ${vote.votes}` ;
+
+
+                
             }
             if (x === 'Democrats') {
+                total.Democrats = Number(total.Democrats) + Number(vote.votes);
+
                 list1.appendChild(listItem1);
+
                 listItem1.innerText = `${vote.church}, ${vote.votes}`;
             }    
             if (x === 'Green party') {
+                total.Greenparty = Number(total.Greenparty) + Number(vote.votes);
+
                 list2.appendChild(listItem2);
                 listItem2.innerText = `${vote.church}, ${vote.votes}`;
             } 
             if (x === 'Pink party') {
+                total.Pinkparty = Number(total.Pinkparty) + Number(vote.votes);
+
                 list3.appendChild(listItem3);
                 listItem3.innerText = `${vote.church}, ${vote.votes}`;
             }
 
+                totalnumber.innerText = 
+                'Total: Communists: ' + total.Communists + ' - ' + 
+                'Total: Democrats: ' + total.Democrats + ' - ' + 
+                'Total: Green Party: ' + total.Greenparty + ' - ' + 
+                'Total: Pink party: ' + total.Pinkparty;
 
           })
 
