@@ -17,35 +17,32 @@ block ResultEntering
               li
               a(href='/error' target="_blank", tabindex='-1') Error page
 
-        #right 
-          p &nbsp; The Church of God
-          br
-          br
+        #logo 
+          .logo
+            img(src="logo.jpg")
 
-        script.
-          $('.dropdown-toggle').dropdown()
 
-        p Enter Result below:
-        
-        div
+        div.flex-container1
+          .flex-item1
             form#form(action="")
+                p#formular Enter Vote result
                 #input
                   select#church
-                      option(value="Church", selected="true", disabled="true") Choose Church &nbsp; &nbsp; &nbsp;
+                      option(value="Church", selected="true", disabled="true") Choose Church &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;
                       option(value="Red Church") Red Church
                       option(value="Blue Church") Blue Church
                       option(value="Yellow Church") Yellow Church
                       option(value="Green Church") Green Church
                 #input
                   select#party
-                      option(value="Party", selected="true", disabled="true") Choose Party &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                      option(value="Party", selected="true", disabled="true") Choose Party &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; 
                       option(value="Communists") Communist party
                       option(value="Democrats") Democratic party
                       option(value="Green party") Green party
                       option(value="Pink party") Pink party
                       option(value="övriga") Övriga
                 #input
-                  input#votes(placeholder="Votes")
+                  input#votes(placeholder="Number of Votes")
                 br
 
                 #button
@@ -71,3 +68,6 @@ block ResultEntering
                     event.preventDefault();
                     return false;
                   });
+
+        script.
+          $('.dropdown-toggle').dropdown()
