@@ -1,7 +1,6 @@
 extends layout
 
 block content
-			
 		.indexheader
 				.dropdown#left
 					a(href="#", data-toggle="dropdown").dropdown-toggle 
@@ -16,10 +15,52 @@ block content
 							li
 							a(href='/error' target="_blank", tabindex='-1') Error page
 
-				#right 
-					p &nbsp; The Church of God
+				#logo 
+					.logo
+						img(src="logo.jpg")
+
+				
+
+				
+
+				ul.flex-container
+					
+					li.flex-item 
+						p
+							span#title Vote information
+							br
+							br
+							br
+							span#info All you need to know about the chuch vote.
+							div
+								a(href="https://www.svenskakyrkan.se/kyrkoval" target="_blank", tabindex='-1') 
+									button contact
+					li.flex-item 
+						p
+							span#title Live updates!
+							br
+							br
+							br
+							span#info You can see live updates about the church vote here.
+							div
+								a(href="/resultat" target="_blank", tabindex='-1') 
+									button Results
+
+					li.flex-item 
+						p
+							span#title Voting information 
+							br
+							br
+							br
+							span#info Are you a church? You can enter your votes here:
+							div
+								a(href="/ResultEntering" target="_blank", tabindex='-1') 
+									button Enter votes  
+					
+
+
 
 				script.
 					$('.dropdown-toggle').dropdown()
 
-				p The church is voting!
+										

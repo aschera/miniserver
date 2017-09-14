@@ -1,6 +1,64 @@
+.flex-container{
+
+    margin-top: 10em;
+    padding:1em;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+  width: 50%;margin: 0 auto;
+  background-color: #EED03C;
+  padding: 5px;
+  width: 20em;
+  height: 15em;
+  margin-top: 10px;
+  border-radius: 1em;
+  
+  line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+p{text-align: center;}
+
+#title {font-size: 2em; color: #9D0801; font-family: 'FoundrySterling', "Helvetica Neue", sans-serif;
+font-weight: 700; line-height: 1.2em;
+letter-spacing: -0.03em;}
+
+#info {font-size: 1.5em; font-weight: 400;line-height: 1.2em;letter-spacing: -0.03em;margin-top: 0; color: #666666;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+
+/* hhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+
+
+
 .indexheader {
     width: 100%;
+    height: 100%;
+    
+
+    background: url(/god.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: black;
+
     min-height: 30em;
     min-width: 20em;
     color:white;
@@ -23,7 +81,8 @@
 } 
 
 #left {float:left;}
-#right{margin-left: 30%; color:white; font-size: 2em;}
+#logo{background-color: #404040;}
+.logo{width: 50%;margin: 0 auto;}
 
 #button{color: black;padding: 5px;}
 #input{
@@ -39,3 +98,15 @@
 #theNews1{background-color: white; color:black;}
 #theNews2{background-color: white; color:black;}
 #theNews3{background-color: white; color:black;}
+
+
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
