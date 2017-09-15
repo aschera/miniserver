@@ -99,14 +99,27 @@ block resultat
             const listItem3 = document.createElement('li');
 
             let x = vote.party;
-            
+            let y = vote.church;
         
             if (x === 'Communists') {
 
                 createlist('Communists', vote);  
 
                 list0.appendChild(listItem0);
-                listItem0.innerText = `${vote.church}, ${vote.votes}` ;
+                listItem0.innerText = `${vote.church} voted: ${vote.votes}` ;
+
+                if(y === 'Red Church'){
+                    listItem0.style.color = 'red';
+                }
+                else if (y === 'Blue Church'){
+                    listItem0.style.color = 'blue';
+                }
+                else if (y === 'Green Church'){
+                    listItem0.style.color = 'green';
+                }
+                else if (y === 'Yellow Church'){
+                    listItem0.style.color = 'orange';
+                }
   
             }
 
@@ -116,21 +129,60 @@ block resultat
 
                 list1.appendChild(listItem1);
 
-                listItem1.innerText = `${vote.church}, ${vote.votes}`;
+                listItem1.innerText = `${vote.church} voted: ${vote.votes}`;
+
+                if(y === 'Red Church'){
+                    listItem1.style.color = 'red';
+                }
+                else if (y === 'Blue Church'){
+                    listItem1.style.color = 'blue';
+                }
+                else if (y === 'Green Church'){
+                    listItem1.style.color = 'green';
+                }
+                else if (y === 'Yellow Church'){
+                    listItem1.style.color = 'orange';
+                }
             }    
             if (x === 'Green party') {
 
                 createlist('Greenparty', vote);
 
                 list2.appendChild(listItem2);
-                listItem2.innerText = `${vote.church}, ${vote.votes}`;
+                listItem2.innerText = `${vote.church} voted: ${vote.votes}`;
+
+                if(y === 'Red Church'){
+                    listItem2.style.color = 'red';
+                }
+                else if (y === 'Blue Church'){
+                    listItem2.style.color = 'blue';
+                }
+                else if (y === 'Green Church'){
+                    listItem2.style.color = 'green';
+                }
+                else if (y === 'Yellow Church'){
+                    listItem2.style.color = 'orange';
+                }
             } 
             if (x === 'Pink party') {
 
                 createlist('Pinkparty', vote);
 
                 list3.appendChild(listItem3);
-                listItem3.innerText = `${vote.church}, ${vote.votes}`;
+                listItem3.innerText = `${vote.church} voted: ${vote.votes}`;
+
+                if(y === 'Red Church'){
+                    listItem3.style.color = 'red';
+                }
+                else if (y === 'Blue Church'){
+                    listItem3.style.color = 'blue';
+                }
+                else if (y === 'Green Church'){
+                    listItem3.style.color = 'green';
+                }
+                else if (y === 'Yellow Church'){
+                    listItem3.style.color = 'orange';
+                }
             }
 
 

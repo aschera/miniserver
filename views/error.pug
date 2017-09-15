@@ -1,4 +1,22 @@
 extends layout
 
 block error
-    h1 404 .. something went terribly wrong!
+    div.flex-container
+        .flex-item4
+            h1 Sorry
+
+            div.error
+                div You seem to be be in a spot of unpleasantness
+                br
+                p 
+                span why dont you 
+                span 
+                a(href="/" target="_blank", tabindex='-1') Go home 
+                span or look at 
+                span 
+                a(href="/resultat" target="_blank", tabindex='-1') something interesting
+                br
+                br
+
+            div.error 
+                img(src="errormsg.jpg")
