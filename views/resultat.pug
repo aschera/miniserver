@@ -1,9 +1,7 @@
 extends layout
 
 
-block resultat
-
-            
+block resultat    
         .resultheader
                 .dropdown#left
                     a(href="#", data-toggle="dropdown").dropdown-toggle 
@@ -18,31 +16,55 @@ block resultat
                             li
                             a(href='/error' target="_blank", tabindex='-1') Error page
 
-                #right 
-                    p &nbsp; The Church of God
+                #logo 
+                    .logo
+                        img(src="logo.jpg")
 
-                script.
-                    $('.dropdown-toggle').dropdown()
 
-                p Communist party:
-                ul#theNews0               
-                // here goes the list for the votes.
+                div.flex-container1
+                    .flex-item2
+                        h1 Latest votes
+                        ul.boxedul
+                            li.boxedli 
+                                span#heading Communists
+                                ul#theNews0(title='Communist party')              
+                                // here goes the list for the votes.
+                        ul.boxedul
+                            li.boxedli
+                                span#heading Democrats
+                                ul#theNews1              
+                                // here goes the list for the votes.
 
-                p Democratic party:
-                ul#theNews1              
-                // here goes the list for the votes.
+                        ul.boxedul
+                            li.boxedli
+                                span#heading Green party
+                                ul#theNews2               
+                                // here goes the list for the votes.
 
-                p Green party:
-                ul#theNews2               
-                // here goes the list for the votes.
+                        ul.boxedul
+                            li.boxedli
+                                span#heading Pink party
+                                ul#theNews3                
+                                // here goes the list for the votes.
 
-                p Pink party:
-                ul#theNews3                
-                // here goes the list for the votes.
-
-                div#total
-                 
-
+                    .flex-item2
+                        h1 Total count
+                        ul.boxedul
+                            li.boxedli 
+                                span#heading Communists
+                                ul#totalc
+                        ul.boxedul
+                            li.boxedli
+                                span#heading Democrats
+                                ul#totald
+                        ul.boxedul
+                            li.boxedli
+                                span#heading Green party
+                                ul#totalg
+                        ul.boxedul
+                            li.boxedli 
+                                span#heading Pink party
+                                ul#totalp
         script.
 
             var total=
@@ -53,9 +75,16 @@ block resultat
                             Pinkparty:0 
                 };
 
+            function createlist(x,y){
+                   total[x] = Number(total[x]) + Number(y.votes);
+            }
+
+        script.
+
           socket.on('vote update', function (vote) {
 
-            console.log(vote);
+
+            // current votes:
 
             const list0 = document.getElementById('theNews0');
             const listItem0 = document.createElement('li');
@@ -69,50 +98,61 @@ block resultat
             const list3 = document.getElementById('theNews3');
             const listItem3 = document.createElement('li');
 
-            const totalnumber = document.getElementById('total');
-            const totalitem = document.createElement('span');
-
             let x = vote.party;
             
-            
-
-
+        
             if (x === 'Communists') {
-                
-                total.Communists = Number(total.Communists) + Number(vote.votes);
-                
+
+                createlist('Communists', vote);  
+
                 list0.appendChild(listItem0);
                 listItem0.innerText = `${vote.church}, ${vote.votes}` ;
-
-
-                
+  
             }
+
             if (x === 'Democrats') {
-                total.Democrats = Number(total.Democrats) + Number(vote.votes);
+
+                createlist('Democrats', vote);
 
                 list1.appendChild(listItem1);
 
                 listItem1.innerText = `${vote.church}, ${vote.votes}`;
             }    
             if (x === 'Green party') {
-                total.Greenparty = Number(total.Greenparty) + Number(vote.votes);
+
+                createlist('Greenparty', vote);
 
                 list2.appendChild(listItem2);
                 listItem2.innerText = `${vote.church}, ${vote.votes}`;
             } 
             if (x === 'Pink party') {
-                total.Pinkparty = Number(total.Pinkparty) + Number(vote.votes);
+
+                createlist('Pinkparty', vote);
 
                 list3.appendChild(listItem3);
                 listItem3.innerText = `${vote.church}, ${vote.votes}`;
             }
 
-                totalnumber.innerText = 
-                'Total: Communists: ' + total.Communists + ' - ' + 
-                'Total: Democrats: ' + total.Democrats + ' - ' + 
-                'Total: Green Party: ' + total.Greenparty + ' - ' + 
-                'Total: Pink party: ' + total.Pinkparty;
+
+            //total votes:
+            const totalnumber0 = document.getElementById('totalc');
+            const totalitem0 = document.createElement('li');
+
+            const totalnumber1 = document.getElementById('totald');
+            const totalitem1 = document.createElement('li');
+
+            const totalnumber2 = document.getElementById('totalg');
+            const totalitem2 = document.createElement('li');
+
+            const totalnumber3 = document.getElementById('totalp');
+            const totalitem3 = document.createElement('li');
+
+            totalnumber0.innerText = total.Communists;
+            totalnumber1.innerText = total.Democrats;
+            totalnumber2.innerText = total.Greenparty;
+            totalnumber3.innerText = total.Pinkparty;
 
           })
 
-
+        script.
+            $('.dropdown-toggle').dropdown()

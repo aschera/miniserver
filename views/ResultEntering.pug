@@ -65,7 +65,7 @@ block ResultEntering
                     
                     //here the data is sent to the socket server.
                     socket.emit('vote update', resultData);
-                    event.preventDefault();
+                    
                     return false;
                   });
 

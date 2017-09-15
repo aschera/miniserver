@@ -67,7 +67,25 @@
   font-size: 1em;
   text-align: center;
 }
+.flex-item2 {
+  width: 50%;margin: 0 auto;
+  background-color: #404040;
+  padding: 5px;
 
+  width: 22.2em;
+  height: 100%;
+  min-width: 20em;
+  min-height: 30em;
+
+  margin-top: 10px;
+  border-radius: 0.1em;
+  
+  line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
 
 
 p{text-align: center;}
@@ -77,6 +95,10 @@ font-weight: 700; line-height: 1.2em;
 letter-spacing: -0.03em;}
 
 #formular {font-size: 2em; color: #EED03C; font-family: 'FoundrySterling', "Helvetica Neue", sans-serif;
+font-weight: 700; line-height: 1.2em;
+letter-spacing: -0.03em;}
+
+#total {font-size: 2em; color: #9D0801; font-family: 'FoundrySterling', "Helvetica Neue", sans-serif;
 font-weight: 700; line-height: 1.2em;
 letter-spacing: -0.03em;}
 
@@ -114,7 +136,7 @@ a:hover{
     width: 100%;
     background-color: black;
     background-size: 100% 20em;
-    min-height: 30em;
+    min-height: 100vh;
     color:white;
 } 
 
@@ -146,7 +168,9 @@ a:hover{
 	   height: 29px;
 	   padding: 5px; 
 }
-
+#heading {font-size: 1.7em; color: #EED03C; font-family: 'FoundrySterling', "Helvetica Neue", sans-serif;
+font-weight: 500; line-height: 1.2em;
+letter-spacing: -0.03em;}
 #theNews0{background-color: white; color:black;}
 #theNews1{background-color: white; color:black;}
 #theNews2{background-color: white; color:black;}
@@ -162,4 +186,55 @@ body {
 html {
     height: 100%;
     width: 100%;
+}
+
+
+ul#theNews0 #theNews1 #theNews2 #theNews3 #totalc #totalp #totalg #totald {
+ width: 250px;
+ background: #292929;
+ padding-top: 1em;
+ color: white;
+ list-style: none;
+ padding-left: 0;
+}
+
+ul.boxedul {
+ width: 300px;
+ background: #292929;
+ color: white;
+ list-style: none;
+ padding-left: 0;
+}
+ul.boxedul2 {
+ width: 300px;
+ 
+ color: white;
+ list-style: none;
+ padding-left: 0;
+}
+ 
+li {
+ padding: 1em;
+ list-style-type: none;
+
+}
+li.boxedli {
+
+ padding: 1em;
+ margin-bottom: : 1em;
+ list-style-type: none;
+margin:1em;
+}
+li.boxedli2 {
+margin:0 0 10px 0;  
+list-style-type: none;
+background: #292929;
+}
+
+li:first-child {
+    border-top: none;
+}
+ 
+li:last-child {
+   border-bottom: none;
 }
