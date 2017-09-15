@@ -238,3 +238,31 @@ li:first-child {
 li:last-child {
    border-bottom: none;
 }
+
+select {
+  width   : 10em;
+  padding : 0.2em;
+}
+
+input{
+  width   : 10em;
+  height: 2em;
+  padding : 0.2em;
+}
+
+option {
+  padding : 0.2em;
+  color   : black;
+  background-color:#EED03C; 
+}
+
+button{
+  padding : 0.2em;
+  color   : black;
+  background-color:#EED03C; 
+}
+
+form {
+    margin:1em;
+    padding:1em;
+}
